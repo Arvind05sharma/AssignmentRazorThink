@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.Container {
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+.title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 7%;
+  box-shadow: 1px 1px 5px gray;
+  padding: 10px;
+}
+input[type='text'] {
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  border: 10;
+  border-radius: 5px;
+  width: 70%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #3fb573;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 15px;
+  border: 0;
+  margin: 10px 0;
+}
+
+
+/** Search bar css**/
+.cards {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  cursor: pointer;
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+}
+
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.dialog {
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 6px -6px black;
+  top: 1%;
+  margin: 20%;
+  position: static;
+  padding:20px;
+}
+
+.image {
+  width: 750px;
+  height: 650px;
+  display: block;
+  object-fit: cover;
+}
+
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
